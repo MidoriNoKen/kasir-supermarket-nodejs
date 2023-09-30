@@ -217,6 +217,3 @@ Terima kasih telah menggunakan Kasir Super Market - Simple Rest API! Kami harap 
 ## Kasir Super Market
 
 Pastikan Anda menggantikan `https://github.com/MidoriNoKen/kasir-supermarket-nodejs` dengan URL yang benar untuk repositori GitHub Anda. Anda juga dapat menyesuaikan tampilan, seperti menambahkan logo atau mengganti warna teks sesuai preferensi Anda.
-
-
-
