@@ -104,7 +104,7 @@ Untuk menjalankan proyek ini, ikuti langkah-langkah berikut:
    Cara instalasi:
 
    ```bash
-   npm install bcrypt
+   npm install bcrypt```
 
    b. body-parser
    
@@ -113,7 +113,7 @@ Untuk menjalankan proyek ini, ikuti langkah-langkah berikut:
    Cara instalasi:
 
    ```bash
-   npm install body-parser
+   npm install body-parser```
 
    c. cors
    
@@ -122,7 +122,7 @@ Untuk menjalankan proyek ini, ikuti langkah-langkah berikut:
    Cara instalasi:
 
    ```bash
-   npm install cors
+   npm install cors```
 
    d. express
    
@@ -131,7 +131,7 @@ Untuk menjalankan proyek ini, ikuti langkah-langkah berikut:
    Cara instalasi:
 
    ```bash
-   npm install express
+   npm install express```
 
    e. express-validator
    
@@ -140,7 +140,7 @@ Untuk menjalankan proyek ini, ikuti langkah-langkah berikut:
    Cara instalasi:
 
    ```bash
-   npm install express-validator
+   npm install express-validator```
 
    f. jsonwebtoken
    
@@ -149,7 +149,7 @@ Untuk menjalankan proyek ini, ikuti langkah-langkah berikut:
    Cara instalasi:
 
    ```bash
-   npm install jsonwebtoken
+   npm install jsonwebtoken```
 
    g. mysql2
    
@@ -158,7 +158,7 @@ Untuk menjalankan proyek ini, ikuti langkah-langkah berikut:
    Cara instalasi:
 
    ```bash
-   npm install mysql2
+   npm install mysql2```
 
    h. pg
    
@@ -167,7 +167,7 @@ Untuk menjalankan proyek ini, ikuti langkah-langkah berikut:
    Cara instalasi:
 
    ```bash
-   npm install pg
+   npm install pg```
 
    i. sequelize
    
@@ -176,7 +176,7 @@ Untuk menjalankan proyek ini, ikuti langkah-langkah berikut:
    Cara instalasi:
 
    ```bash
-   npm install sequelize
+   npm install sequelize```
 
    j. sequelize-cli
    
