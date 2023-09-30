@@ -15,6 +15,30 @@
 
 Proyek "Kasir Super Market" adalah sebuah aplikasi Rest API yang memungkinkan admin atau kasir untuk mengelola transaksi di sebuah supermarket. Aplikasi ini dibangun dengan menggunakan Node.js dan mengimplementasikan otentikasi berbasis token menggunakan JSON Web Tokens (JWT). Aplikasi ini juga dilengkapi dengan fitur pengujian end-to-end (E2E) untuk menguji otentikasi dengan token.
 
+Bahasa : Javascript
+Framework : Node JS
+API : Ya
+Tipe : Simple Rest API
+CRUD : Minimal 2
+CRUD Berelasi : Ya
+Jumlah Relasi : Minimal 2
+Database : Ya
+Jenis Database : SQL
+Database yang digunakan : MySQL
+Otentikasi : Ya
+Jenis Otentikasi : JWT Token
+Testing : Ya
+Jenis Testing : E2E Testing
+Pattern Proyek : MVC
+Penjelasan Pattern : Ya
+Repositori : Ya
+Provider Repositori : GitHub
+Dokumentasi API : Ya
+Aplikasi Dokumentasi : Postman
+
+Nama Aplikasi : Kasir Super Market
+Nama Database : kasir_sm
+
 ## Desain Database
 
 ### Tabel Users
