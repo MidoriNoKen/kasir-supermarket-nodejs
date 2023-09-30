@@ -87,7 +87,7 @@ Untuk menjalankan proyek ini, ikuti langkah-langkah berikut:
 1. Clone repositori dari GitHub:
 
    ```bash
-   git clone https://github.com/yourusername/kasir-super-market.git
+   git clone https://github.com/MidoriNoKen/kasir-supermarket-nodejs
 
 2. Masuk ke direktori proyek:
 
