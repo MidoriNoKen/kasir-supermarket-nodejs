@@ -105,6 +105,7 @@ Untuk menjalankan proyek ini, ikuti langkah-langkah berikut:
 
    ```bash
    npm install bcrypt
+   
 
    b. body-parser
    
