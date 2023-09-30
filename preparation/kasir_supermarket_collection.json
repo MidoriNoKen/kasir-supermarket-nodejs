@@ -1,0 +1,759 @@
+{
+    "info": {
+      "_postman_id": "your-collection-id",
+      "name": "Kasir Super Market API",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "User Routes",
+        "item": [
+          {
+            "name": "Register User (Admin)",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "{{admin_token}}"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"username\": \"testuser\",\n    \"password\": \"testpassword\",\n    \"name\": \"Test User\",\n    \"address\": \"123 Test Street\",\n    \"phone\": \"123456789\",\n    \"nik\": \"1234567890\",\n    \"roleId\": 1\n}"
+              },
+              "url": {
+                "raw": "{{base_url}}/api/admin/register",
+                "host": [
+                  "{{base_url}}"
+                ],
+                "path": [
+                  "api",
+                  "admin",
+                  "register"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Login User",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"username\": \"admin\",\n    \"password\": \"password123\"\n}"
+              },
+              "url": {
+                "raw": "{{base_url}}/api/login",
+                "host": [
+                  "{{base_url}}"
+                ],
+                "path": [
+                  "api",
+                  "login"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Get All Users (Admin)",
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "{{admin_token}}"
+                }
+              ],
+              "url": {
+                "raw": "{{base_url}}/api/admin/users",
+                "host": [
+                  "{{base_url}}"
+                ],
+                "path": [
+                  "api",
+                  "admin",
+                  "users"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Get User by ID (Admin)",
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "{{admin_token}}"
+                }
+              ],
+              "url": {
+                "raw": "{{base_url}}/api/admin/users/1",
+                "host": [
+                  "{{base_url}}"
+                ],
+                "path": [
+                  "api",
+                  "admin",
+                  "users",
+                  "1"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Get Users by Role (Admin)",
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "{{admin_token}}"
+                }
+              ],
+              "url": {
+                "raw": "{{base_url}}/api/admin/users/role/admin",
+                "host": [
+                  "{{base_url}}"
+                ],
+                "path": [
+                  "api",
+                  "admin",
+                  "users",
+                  "role",
+                  "admin"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Get Admin Profile (Admin)",
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "{{admin_token}}"
+                }
+              ],
+              "url": {
+                "raw": "{{base_url}}/api/admin/profile",
+                "host": [
+                  "{{base_url}}"
+                ],
+                "path": [
+                  "api",
+                  "admin",
+                  "profile"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Get Client Profile (Client)",
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "{{client_token}}"
+                }
+              ],
+              "url": {
+                "raw": "{{base_url}}/api/client/profile",
+                "host": [
+                  "{{base_url}}"
+                ],
+                "path": [
+                  "api",
+                  "client",
+                  "profile"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Update User by ID (Admin)",
+            "request": {
+              "method": "PUT",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "{{admin_token}}"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"username\": \"newtestuser\",\n    \"password\": \"newtestpassword\",\n    \"name\": \"Updated Test User\",\n    \"address\": \"456 Updated Test Street\",\n    \"phone\": \"987654321\",\n    \"nik\": \"9876543210\",\n    \"roleId\": 2\n}"
+              },
+              "url": {
+                "raw": "{{base_url}}/api/admin/users/1",
+                "host": [
+                  "{{base_url}}"
+                ],
+                "path": [
+                  "api",
+                  "admin",
+                  "users",
+                  "1"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Update Client Profile (Client)",
+            "request": {
+              "method": "PUT",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "{{client_token}}"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"name\": \"Updated Client\",\n    \"address\": \"789 Updated Client Street\",\n    \"phone\": \"1234567890\"\n}"
+              },
+              "url": {
+                "raw": "{{base_url}}/api/client/profile",
+                "host": [
+                  "{{base_url}}"
+                ],
+                "path": [
+                  "api",
+                  "client",
+                  "profile"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Delete User by ID (Admin)",
+            "request": {
+              "method": "DELETE",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "{{admin_token}}"
+                }
+              ],
+              "url": {
+                "raw": "{{base_url}}/api/admin/users/2",
+                "host": [
+                  "{{base_url}}"
+                ],
+                "path": [
+                  "api",
+                  "admin",
+                  "users",
+                  "2"
+                ]
+              }
+            },
+            "response": []
+          }
+        ]
+      },
+      {
+        "name": "Product Routes",
+        "item": [
+          {
+            "name": "Create Product (Admin)",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "{{admin_token}}"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"name\": \"Product Name\",\n    \"price\": 9.99,\n    \"stock\": 100,\n    \"category\": \"Category Name\"\n}"
+              },
+              "url": {
+                "raw": "{{base_url}}/api/products",
+                "host": [
+                  "{{base_url}}"
+                ],
+                "path": [
+                  "api",
+                  "products"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Get All Products (Public)",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "{{base_url}}/api/products",
+                "host": [
+                  "{{base_url}}"
+                ],
+                "path": [
+                  "api",
+                  "products"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Get Product by ID (Public)",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "{{base_url}}/api/products/1",
+                "host": [
+                  "{{base_url}}"
+                ],
+                "path": [
+                  "api",
+                  "products",
+                  "1"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Get Product by Category (Public)",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "{{base_url}}/api/products/category/Category%20Name",
+                "host": [
+                  "{{base_url}}"
+                ],
+                "path": [
+                  "api",
+                  "products",
+                  "category",
+                  "Category%20Name"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Update Product by ID (Admin)",
+            "request": {
+              "method": "PUT",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "{{admin_token}}"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"name\": \"Updated Product Name\",\n    \"price\": 19.99,\n    \"stock\": 50,\n    \"category\": \"Updated Category Name\"\n}"
+              },
+              "url": {
+                "raw": "{{base_url}}/api/products/1",
+                "host": [
+                  "{{base_url}}"
+                ],
+                "path": [
+                  "api",
+                  "products",
+                  "1"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Delete Product by ID (Admin)",
+            "request": {
+              "method": "DELETE",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "{{admin_token}}"
+                }
+              ],
+              "url": {
+                "raw": "{{base_url}}/api/products/2",
+                "host": [
+                  "{{base_url}}"
+                ],
+                "path": [
+                  "api",
+                  "products",
+                  "2"
+                ]
+              }
+            },
+            "response": []
+          }
+        ]
+      },      
+      {
+        "name": "Transaction Routes",
+        "item": [
+          {
+            "name": "Create Transaction (Admin)",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "{{admin_token}}"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"date\": \"2023-09-28\",\n    \"user_id\": 1, \n    \"details\": [\n        {\n            \"productId\": 1, \n            \"quantity\": 2\n        }\n    ]\n}"
+              },
+              "url": {
+                "raw": "{{base_url}}/api/transactions",
+                "host": [
+                  "{{base_url}}"
+                ],
+                "path": [
+                  "api",
+                  "transactions"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Get All Transactions (Admin)",
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "{{admin_token}}"
+                }
+              ],
+              "url": {
+                "raw": "{{base_url}}/api/transactions",
+                "host": [
+                  "{{base_url}}"
+                ],
+                "path": [
+                  "api",
+                  "transactions"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Get Transaction by ID (Admin)",
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "{{admin_token}}"
+                }
+              ],
+              "url": {
+                "raw": "{{base_url}}/api/transactions/1",
+                "host": [
+                  "{{base_url}}"
+                ],
+                "path": [
+                  "api",
+                  "transactions",
+                  "1"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Get Transaction By User (Admin)",
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "{{admin_token}}"
+                }
+              ],
+              "url": {
+                "raw": "{{base_url}}/api/transactions/user/1",
+                "host": [
+                  "{{base_url}}"
+                ],
+                "path": [
+                  "api",
+                  "transactions",
+                  "admin",
+                  "1"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Get Client Transaction (Client)",
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "{{client_token}}"
+                }
+              ],
+              "url": {
+                "raw": "{{base_url}}/api/transactions/client",
+                "host": [
+                  "{{base_url}}"
+                ],
+                "path": [
+                  "api",
+                  "transactions",
+                  "client"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Update Transaction by ID (Admin)",
+            "request": {
+              "method": "PUT",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "{{admin_token}}"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"date\": \"2023-09-29\",\n    \"user_id\": 1, \n    \"details\": [\n        {\n            \"productId\": 1, \n            \"quantity\": 3\n        }\n    ]\n}"
+              },
+              "url": {
+                "raw": "{{base_url}}/api/transactions/1",
+                "host": [
+                  "{{base_url}}"
+                ],
+                "path": [
+                  "api",
+                  "transactions",
+                  "1"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Delete Transaction by ID (Admin)",
+            "request": {
+              "method": "DELETE",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "{{admin_token}}"
+                }
+              ],
+              "url": {
+                "raw": "{{base_url}}/api/transactions/2",
+                "host": [
+                  "{{base_url}}"
+                ],
+                "path": [
+                  "api",
+                  "transactions",
+                  "2"
+                ]
+              }
+            },
+            "response": []
+          }
+        ]
+      },      
+      {
+        "name": "Transaction Detail Routes",
+        "item": [
+          {
+            "name": "Get Transaction Details by Transaction ID (Public)",
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "{{admin_token}}"
+                }
+              ],
+              "url": {
+                "raw": "{{base_url}}/api/transaction-details/transaction/1",
+                "host": [
+                  "{{base_url}}"
+                ],
+                "path": [
+                  "api",
+                  "transaction-details",
+                  "transaction",
+                  "1"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Get Transaction Detail by ID (Public)",
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "{{admin_token}}"
+                }
+              ],
+              "url": {
+                "raw": "{{base_url}}/api/transaction-details/1",
+                "host": [
+                  "{{base_url}}"
+                ],
+                "path": [
+                  "api",
+                  "transaction-details",
+                  "1"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Get Client Transaction Detail (Client)",
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "{{client_token}}"
+                }
+              ],
+              "url": {
+                "raw": "{{base_url}}/api/transaction-details/client/1",
+                "host": [
+                  "{{base_url}}"
+                ],
+                "path": [
+                  "api",
+                  "transaction-details",
+                  "client",
+                  "1"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Update Transaction Detail by ID (Admin)",
+            "request": {
+              "method": "PUT",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "{{admin_token}}"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"quantity\": 5\n}"
+              },
+              "url": {
+                "raw": "{{base_url}}/api/transaction-details/1",
+                "host": [
+                  "{{base_url}}"
+                ],
+                "path": [
+                  "api",
+                  "transaction-details",
+                  "1"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Delete Transaction Detail by ID (Admin)",
+            "request": {
+              "method": "DELETE",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "{{admin_token}}"
+                }
+              ],
+              "url": {
+                "raw": "{{base_url}}/api/transaction-details/1",
+                "host": [
+                  "{{base_url}}"
+                ],
+                "path": [
+                  "api",
+                  "transaction-details",
+                  "1"
+                ]
+              }
+            },
+            "response": []
+          }
+        ]
+      }
+    ],
+    "_postman_variable_scope": "collection",
+    "_postman_exported_at": "2023-09-28T00:00:00.000Z",
+    "_postman_exported_using": "Postman/7.39.0"
+  }
+  

@@ -1,0 +1,2037 @@
+{
+	"info": {
+		"_postman_id": "2788eaab-d4ea-48b0-94f4-94c6613a2012",
+		"name": "Kasir Super Market API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24868597"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login Admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"password123\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Client (Admin)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{admin_token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"user\",\n    \"password\": \"password\",\n    \"name\": \"Test User\",\n    \"address\": \"123 Test Street\",\n    \"phone\": \"123456789\",\n    \"nik\": \"1234567890\",\n    \"roleId\": 1\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/admin/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Tester (Admin)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{admin_token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"test\",\n    \"password\": \"password\",\n    \"name\": \"Test User\",\n    \"address\": \"123 Test Street\",\n    \"phone\": \"123456789\",\n    \"nik\": \"1234567890\",\n    \"roleId\": 1\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/admin/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Client",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"user\",\n    \"password\": \"password\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Tester",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"test\",\n    \"password\": \"password\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Tester (Admin) Have Same Username",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{admin_token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"test\",\n    \"password\": \"password\",\n    \"name\": \"Test User\",\n    \"address\": \"123 Test Street\",\n    \"phone\": \"123456789\",\n    \"nik\": \"1234567890\",\n    \"roleId\": 1\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/admin/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Operations",
+			"item": [
+				{
+					"name": "User Routes",
+					"item": [
+						{
+							"name": "Get All Users (Admin)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/admin/users",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get User Admin by ID (Admin)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/admin/users/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get User Client by ID (Admin)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/admin/users/2",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"users",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get User Tester by ID (Admin)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/admin/users/3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"users",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Users by Role Admin (Admin)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/admin/users/role/admin",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"users",
+										"role",
+										"admin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Users by Role Client (Admin)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/admin/users/role/client",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"users",
+										"role",
+										"client"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Admin Profile (Admin)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/admin/profile",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Client Profile Client (Client)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{client_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/client/profile",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"client",
+										"profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Client Profile Tester (Client)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{test_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/client/profile",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"client",
+										"profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update User Admin by ID (Admin)",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"midori\",\n    \"password\": \"Midori313131\",\n    \"name\": \"Taufik Ardiansyah Putra\",\n    \"address\": \"Jl Sunan Ampel 1 No 20\",\n    \"phone\": \"987654321\",\n    \"nik\": \"9876543210\",\n    \"roleId\": 2\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/admin/users/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update User Admin by ID (Admin) Have Same Username",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"user\",\n    \"password\": \"Midori313131\",\n    \"name\": \"Taufik Ardiansyah Putra\",\n    \"address\": \"Jl Sunan Ampel 1 No 20\",\n    \"phone\": \"987654321\",\n    \"nik\": \"9876543210\",\n    \"roleId\": 2\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/admin/users/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update User Client by ID (Admin)",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"newtestuser\",\n    \"password\": \"newtestpassword\",\n    \"name\": \"Updated Test User\",\n    \"address\": \"456 Updated Test Street\",\n    \"phone\": \"987654321\",\n    \"nik\": \"9876543210\",\n    \"roleId\": 1\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/admin/users/2",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"users",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update User Tester by ID (Admin)",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"ubuntu\",\n    \"password\": \"debian\",\n    \"name\": \"Linux Ubuntu and Debian\",\n    \"address\": \"456 Updated Test Street\",\n    \"phone\": \"987654321\",\n    \"nik\": \"9876543210\",\n    \"roleId\": 1\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/admin/users/3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"users",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Client Profile (Client)",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{client_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Linux Ubuntu\",\n    \"address\": \"789 Updated Client Street\",\n    \"phone\": \"1234567890\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/client/profile",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"client",
+										"profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Tester Profile (Client)",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{test_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Updated Client\",\n    \"address\": \"789 Updated Client Street\",\n    \"phone\": \"1234567890\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/client/profile",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"client",
+										"profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Users (Admin)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/admin/users",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"users"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Product Routes",
+					"item": [
+						{
+							"name": "Create Product (Admin)",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Product Name\",\n    \"price\": 10,\n    \"stock\": 100,\n    \"category\": \"Category Name\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/admin/products",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Product (Admin)",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Product Name 2\",\n    \"price\": 10,\n    \"stock\": 100,\n    \"category\": \"Category Name\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/admin/products",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Product (Admin)",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Product Name 3\",\n    \"price\": 10,\n    \"stock\": 100,\n    \"category\": \"Name Category\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/admin/products",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Product (Admin) Have Same Name",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Product Name 3\",\n    \"price\": 10,\n    \"stock\": 100,\n    \"category\": \"Name Category\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/admin/products",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Products (Public)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/products",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Product by ID (Public)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/products/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Product by ID (Public)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/products/2",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Product by ID (Public)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/products/3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Product by Category (Public)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/products/category/Category%20Name",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"category",
+										"Category%20Name"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Product by Category (Public)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/products/category/Name%20Category",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"category",
+										"Name%20Category"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Product by ID (Admin)",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Pisang\",\n    \"price\": 10,\n    \"stock\": 50,\n    \"category\": \"Buah\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/admin/products/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"products",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Product by ID (Admin)",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Apel\",\n    \"price\": 8,\n    \"stock\": 25,\n    \"category\": \"Buah\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/admin/products/2",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"products",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Product by ID (Admin)",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Wortel\",\n    \"price\": 3,\n    \"stock\": 100,\n    \"category\": \"Sayur\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/admin/products/3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"products",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Product by ID (Admin) Have Same Name",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Apel\",\n    \"price\": 3,\n    \"stock\": 100,\n    \"category\": \"Sayur\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/admin/products/3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"products",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Transaction Routes",
+					"item": [
+						{
+							"name": "Create Transaction (Admin)",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"date\": \"2023-09-28\",\n    \"userId\": 2,\n    \"details\": [\n        {\n        \"productId\": 1,\n        \"quantity\": 5\n        }\n    ]\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/admin/transactions",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"transactions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Transaction (Admin)",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"date\": \"2023-09-29\",\n    \"userId\": 3,\n    \"details\": [\n        {\n        \"productId\": 1,\n        \"quantity\": 5\n        }\n    ]\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/admin/transactions",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"transactions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Transaction (Admin)",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"date\": \"2023-09-30\",\n    \"userId\": 2,\n    \"details\": [\n        {\n        \"productId\": 1,\n        \"quantity\": 5\n        },\n        {\n        \"productId\": 3,\n        \"quantity\": 5\n        }\n    ]\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/admin/transactions",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"transactions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Transaction (Admin)",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"date\": \"2023-10-01\",\n    \"userId\": 3,\n    \"details\": [\n        {\n        \"productId\": 1,\n        \"quantity\": 5\n        },\n        {\n        \"productId\": 3,\n        \"quantity\": 5\n        }\n    ]\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/admin/transactions",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"transactions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Transaction (Admin) Overload",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"date\": \"2023-10-01\",\n    \"userId\": 2,\n    \"details\": [\n        {\n        \"productId\": 1,\n        \"quantity\": 500\n        },\n        {\n        \"productId\": 3,\n        \"quantity\": 500\n        }\n    ]\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/admin/transactions",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"transactions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Transaction (Admin) Admin Blocked",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"date\": \"2023-10-01\",\n    \"userId\": 1,\n    \"details\": [\n        {\n        \"productId\": 1,\n        \"quantity\": 5\n        },\n        {\n        \"productId\": 3,\n        \"quantity\": 5\n        }\n    ]\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/admin/transactions",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"transactions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Transactions (Admin)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/admin/transactions",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"transactions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Transaction by ID (Admin)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/admin/transactions/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"transactions",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Transaction by ID (Admin)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/admin/transactions/2",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"transactions",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Transaction by ID (Admin)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/admin/transactions/3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"transactions",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Transaction by ID (Admin)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/admin/transactions/4",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"transactions",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Transaction By User (Admin)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/admin/transactions/user/2",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"transactions",
+										"user",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Transaction By User (Admin)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/admin/transactions/user/3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"transactions",
+										"user",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Transaction By User (Admin) Admin Blocked",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/admin/transactions/user/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"transactions",
+										"user",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Client Transaction (Client)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{client_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/client/transactions",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"client",
+										"transactions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Client Transaction (Client)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{test_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/client/transactions",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"client",
+										"transactions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Transaction by ID (Admin)",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"date\": \"2023-09-28\",\n    \"userId\": 2,\n    \"details\": [\n        {\n        \"productId\": 1,\n        \"quantity\": 10\n        }\n    ]\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/admin/transactions/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"transactions",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Transaction by ID (Admin)",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"date\": \"2023-09-29\",\n    \"userId\": 3,\n    \"details\": [\n        {\n        \"productId\": 3,\n        \"quantity\": 10\n        }\n    ]\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/admin/transactions/2",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"transactions",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Transaction by ID (Admin)",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"date\": \"2023-09-30\",\n    \"userId\": 2,\n    \"details\": [\n        {\n        \"productId\": 3,\n        \"quantity\": 10\n        },\n        {\n        \"productId\": 3,\n        \"quantity\": 10\n        }\n    ]\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/admin/transactions/3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"transactions",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Transaction by ID (Admin)",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"date\": \"2023-10-01\",\n    \"userId\": 3,\n    \"details\": [\n        {\n        \"productId\": 3,\n        \"quantity\": 10\n        },\n        {\n        \"productId\": 3,\n        \"quantity\": 10\n        }\n    ]\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/admin/transactions/4",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"transactions",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Transaction by ID (Admin) Overload",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"date\": \"2023-10-01\",\n    \"userId\": 2,\n    \"details\": [\n        {\n        \"productId\": 1,\n        \"quantity\": 500\n        },\n        {\n        \"productId\": 3,\n        \"quantity\": 500\n        }\n    ]\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/admin/transactions/4",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"transactions",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Transaction (Admin) Admin Blocked Copy",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"date\": \"2023-10-01\",\n    \"userId\": 1,\n    \"details\": [\n        {\n        \"productId\": 1,\n        \"quantity\": 5\n        },\n        {\n        \"productId\": 3,\n        \"quantity\": 5\n        }\n    ]\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/admin/transactions/4",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"transactions",
+										"4"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Transaction Detail Routes",
+					"item": [
+						{
+							"name": "Get All Transaction Details (Admin)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/admin/transaction/detail",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"transaction",
+										"detail"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Transaction Details by Transaction ID (Admin)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/admin/transaction/1/detail",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"transaction",
+										"1",
+										"detail"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Transaction Details by Transaction ID (Admin)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/admin/transaction/2/detail",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"transaction",
+										"2",
+										"detail"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Transaction Details by Transaction ID (Admin)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/admin/transaction/3/detail",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"transaction",
+										"3",
+										"detail"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Transaction Details by Transaction ID (Admin)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/admin/transaction/4/detail",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"transaction",
+										"4",
+										"detail"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Transaction Detail by ID (Admin)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/admin/transaction/detail/7",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"transaction",
+										"detail",
+										"7"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Transaction Detail by ID (Admin)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/admin/transaction/detail/8",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"transaction",
+										"detail",
+										"8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Transaction Detail by ID (Admin)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/admin/transaction/detail/9",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"transaction",
+										"detail",
+										"9"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Transaction Detail by ID (Admin)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/admin/transaction/detail/11",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"transaction",
+										"detail",
+										"11"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Client Transaction Detail (Client)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{client_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/client/transaction/detail",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"client",
+										"transaction",
+										"detail"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Client Transaction Detail (Client)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{test_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/client/transaction/detail",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"client",
+										"transaction",
+										"detail"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Delete",
+			"item": [
+				{
+					"name": "Delete Transaction by ID (Admin)",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{admin_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/transactions/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"transactions",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product by ID (Admin)",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{admin_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/admin/products/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"products",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User Tester by ID (Admin)",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{admin_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/admin/users/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"users",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

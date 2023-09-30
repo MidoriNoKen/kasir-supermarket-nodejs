@@ -1,0 +1,1408 @@
+{
+	"id": "45421293-fd6c-41f7-9783-a044cfaf4bba",
+	"name": "Kasir Super Market API",
+	"timestamp": "2023-09-29T19:43:19.240Z",
+	"collection_id": "24868597-2788eaab-d4ea-48b0-94f4-94c6613a2012",
+	"folder_id": "24868597-6848bb1d-84d8-4bae-aa9e-dba00b55aaa6",
+	"environment_id": "24868597-2a7702dd-866a-4a9c-88c3-fa2c6224cd93",
+	"totalPass": 0,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-09-29T19:43:13.389Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "81d55583-de22-4e84-a0b2-c86d4177409f",
+			"name": "Get All Users (Admin)",
+			"url": "http://localhost:3000/api/admin/users",
+			"time": 15,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				15
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "20ebe52d-58d7-40f7-a5a8-657fe890e328",
+			"name": "Get User Admin by ID (Admin)",
+			"url": "http://localhost:3000/api/admin/users/1",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				9
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "7d003f66-7097-404f-9566-d3fed6b48fbc",
+			"name": "Get User Client by ID (Admin)",
+			"url": "http://localhost:3000/api/admin/users/2",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				10
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "7f239427-7c43-4d1c-9b4b-f7b24e56164e",
+			"name": "Get User Tester by ID (Admin)",
+			"url": "http://localhost:3000/api/admin/users/3",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				9
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "c6f8a269-2dd0-4967-8568-7200b3e1544f",
+			"name": "Get Users by Role Admin (Admin)",
+			"url": "http://localhost:3000/api/admin/users/role/admin",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				10
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "067a1bcd-3669-40e0-9c4c-69c689773f15",
+			"name": "Get Users by Role Client (Admin)",
+			"url": "http://localhost:3000/api/admin/users/role/client",
+			"time": 8,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				8
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "05926ce9-b954-48ee-8aab-45f51f1f2a7b",
+			"name": "Get Admin Profile (Admin)",
+			"url": "http://localhost:3000/api/admin/profile",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				7
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "5abbdfbb-10da-4794-b81d-dee79d1110a9",
+			"name": "Get Client Profile Client (Client)",
+			"url": "http://localhost:3000/api/client/profile",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				9
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "0a2de9e2-eb88-40ba-bec5-f0c8e8ee71ab",
+			"name": "Get Client Profile Tester (Client)",
+			"url": "http://localhost:3000/api/client/profile",
+			"time": 8,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				8
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "f666ee58-fd8a-4752-8856-eb6abfe18869",
+			"name": "Update User Admin by ID (Admin)",
+			"url": "http://localhost:3000/api/admin/users/1",
+			"time": 74,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				74
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "a19d3305-8c8e-4496-96fc-cc5bf0e32184",
+			"name": "Update User Admin by ID (Admin) Have Same Username",
+			"url": "http://localhost:3000/api/admin/users/1",
+			"time": 8,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				8
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "6e79107a-f6c0-4420-ae45-166190d329c3",
+			"name": "Update User Client by ID (Admin)",
+			"url": "http://localhost:3000/api/admin/users/2",
+			"time": 76,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				76
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "dc7e85c1-cd94-4f80-aef5-60a6d3e40252",
+			"name": "Update User Tester by ID (Admin)",
+			"url": "http://localhost:3000/api/admin/users/3",
+			"time": 69,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				69
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "f3cea0a5-447c-4993-bab4-065820db5913",
+			"name": "Update Client Profile (Client)",
+			"url": "http://localhost:3000/api/client/profile",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				9
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "7a0649ea-4cf9-415e-8d80-6ae1885beedd",
+			"name": "Update Tester Profile (Client)",
+			"url": "http://localhost:3000/api/client/profile",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				9
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "4a4bf3e5-2d00-47b3-bbbc-2cceded0f52f",
+			"name": "Get All Users (Admin)",
+			"url": "http://localhost:3000/api/admin/users",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				7
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "17e9ee79-1c30-4725-89c8-5c28854769d7",
+			"name": "Create Product (Admin)",
+			"url": "http://localhost:3000/api/admin/products",
+			"time": 12,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				12
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "fab30000-87ba-4b43-8d64-60ff70126b4e",
+			"name": "Create Product (Admin)",
+			"url": "http://localhost:3000/api/admin/products",
+			"time": 9,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				9
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "51281380-bdcc-4e79-b080-e23e71d9b6af",
+			"name": "Create Product (Admin)",
+			"url": "http://localhost:3000/api/admin/products",
+			"time": 10,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				10
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "2d5f9c5e-cf5c-4836-b348-083cac1d0b22",
+			"name": "Create Product (Admin) Have Same Name",
+			"url": "http://localhost:3000/api/admin/products",
+			"time": 8,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				8
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "290539cc-2a80-4f8e-8b9d-c159b306a2c1",
+			"name": "Get All Products (Public)",
+			"url": "http://localhost:3000/api/products",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "e82ebe93-a90d-49bb-8690-3213c1388a7f",
+			"name": "Get Product by ID (Public)",
+			"url": "http://localhost:3000/api/products/1",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				4
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "2819ac33-bc3b-47cf-bdcc-4e450c36a3ce",
+			"name": "Get Product by ID (Public)",
+			"url": "http://localhost:3000/api/products/2",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "3ef9f142-a9fb-4c02-92b2-2ebab0064f2c",
+			"name": "Get Product by ID (Public)",
+			"url": "http://localhost:3000/api/products/3",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "d0e7a74b-80b5-44d0-a69d-1acac6239ef2",
+			"name": "Get Product by Category (Public)",
+			"url": "http://localhost:3000/api/products/category/Category%20Name",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				4
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "ad936e93-a5f8-4935-acf1-aea604084936",
+			"name": "Get Product by Category (Public)",
+			"url": "http://localhost:3000/api/products/category/Name%20Category",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "286463a4-db8f-4478-b4e5-d195f9c7c401",
+			"name": "Update Product by ID (Admin)",
+			"url": "http://localhost:3000/api/admin/products/1",
+			"time": 17,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				17
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "8af7c3dc-e27d-4db5-8f1a-fab83c372e7f",
+			"name": "Update Product by ID (Admin)",
+			"url": "http://localhost:3000/api/admin/products/2",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				10
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "497acfa9-803c-43b8-8a50-96ba65ce381a",
+			"name": "Update Product by ID (Admin)",
+			"url": "http://localhost:3000/api/admin/products/3",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				9
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "4bcb6814-17af-4604-91bd-5caedbd5de00",
+			"name": "Update Product by ID (Admin) Have Same Name",
+			"url": "http://localhost:3000/api/admin/products/3",
+			"time": 8,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				8
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "de61ed58-f785-4ddb-9f91-c85a857167d6",
+			"name": "Create Transaction (Admin)",
+			"url": "http://localhost:3000/api/admin/transactions",
+			"time": 18,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				18
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "cc687031-a89c-4e03-94f7-9de796357d1d",
+			"name": "Create Transaction (Admin)",
+			"url": "http://localhost:3000/api/admin/transactions",
+			"time": 16,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				16
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "8a79383d-40eb-49d0-be1e-10cec8ace202",
+			"name": "Create Transaction (Admin)",
+			"url": "http://localhost:3000/api/admin/transactions",
+			"time": 19,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				19
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "a022f841-4260-4260-89f0-4453c6905cad",
+			"name": "Create Transaction (Admin)",
+			"url": "http://localhost:3000/api/admin/transactions",
+			"time": 21,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				21
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "1bef6763-cd22-476c-937a-329afded956f",
+			"name": "Create Transaction (Admin) Overload",
+			"url": "http://localhost:3000/api/admin/transactions",
+			"time": 7,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				7
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "b89d923b-7efa-48c5-8770-dc53c4d256c3",
+			"name": "Create Transaction (Admin) Admin Blocked",
+			"url": "http://localhost:3000/api/admin/transactions",
+			"time": 7,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				7
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "b2a71529-4153-4945-924d-2a8efb31d01e",
+			"name": "Get All Transactions (Admin)",
+			"url": "http://localhost:3000/api/admin/transactions",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				7
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "37972136-5206-4a27-bf64-ca81a511df33",
+			"name": "Get Transaction by ID (Admin)",
+			"url": "http://localhost:3000/api/admin/transactions/1",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				6
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "1bd7728c-ada0-484c-b2ea-eb3405318f17",
+			"name": "Get Transaction by ID (Admin)",
+			"url": "http://localhost:3000/api/admin/transactions/2",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				6
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "d041bbe3-c2ac-44a6-b688-f2e54a157f05",
+			"name": "Get Transaction by ID (Admin)",
+			"url": "http://localhost:3000/api/admin/transactions/3",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				6
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "673defaa-da0e-4553-b2b3-1563087be36b",
+			"name": "Get Transaction by ID (Admin)",
+			"url": "http://localhost:3000/api/admin/transactions/4",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				7
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "b2997d52-de03-4989-ae60-9e3a7a9f23f5",
+			"name": "Get Transaction By User (Admin)",
+			"url": "http://localhost:3000/api/admin/transactions/user/2",
+			"time": 8,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				8
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "621d65f1-4ff3-4436-9fdd-9f9adc5709bd",
+			"name": "Get Transaction By User (Admin)",
+			"url": "http://localhost:3000/api/admin/transactions/user/3",
+			"time": 8,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				8
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "90c732e0-c98e-4b4c-a79e-c2fc2d62b866",
+			"name": "Get Transaction By User (Admin) Admin Blocked",
+			"url": "http://localhost:3000/api/admin/transactions/user/1",
+			"time": 6,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				6
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "07be6bd9-d647-4a5a-a613-f0cf06a06473",
+			"name": "Get Client Transaction (Client)",
+			"url": "http://localhost:3000/api/client/transactions",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				6
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "02a538c9-72e8-485a-a773-46308612a554",
+			"name": "Get Client Transaction (Client)",
+			"url": "http://localhost:3000/api/client/transactions",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				7
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "80f91baf-cd67-4cb9-b341-9f4b866a2288",
+			"name": "Update Transaction by ID (Admin)",
+			"url": "http://localhost:3000/api/admin/transactions/1",
+			"time": 25,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				25
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "b07039da-1fec-4c13-b59a-b6f3d6563831",
+			"name": "Update Transaction by ID (Admin)",
+			"url": "http://localhost:3000/api/admin/transactions/2",
+			"time": 20,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				20
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "c92d14bb-168e-40d0-830b-037bcab5b96a",
+			"name": "Update Transaction by ID (Admin)",
+			"url": "http://localhost:3000/api/admin/transactions/3",
+			"time": 29,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				29
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "e91fbc75-756b-432f-8aac-063217591e70",
+			"name": "Update Transaction by ID (Admin)",
+			"url": "http://localhost:3000/api/admin/transactions/4",
+			"time": 25,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				25
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "e9fee57f-46f0-4d0a-a192-db31f60bfb9b",
+			"name": "Update Transaction by ID (Admin) Overload",
+			"url": "http://localhost:3000/api/admin/transactions/4",
+			"time": 14,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				14
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "cffa3d12-f217-4783-b464-1ca11ee480db",
+			"name": "Update Transaction (Admin) Admin Blocked Copy",
+			"url": "http://localhost:3000/api/admin/transactions/4",
+			"time": 6,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				6
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "97ac83d8-5855-423c-a7ca-a3e9aa5930e7",
+			"name": "Get All Transaction Details (Admin)",
+			"url": "http://localhost:3000/api/admin/transaction/detail",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				7
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "a18446ae-dbae-4923-a832-4611b2262ce0",
+			"name": "Get Transaction Details by Transaction ID (Admin)",
+			"url": "http://localhost:3000/api/admin/transaction/1/detail",
+			"time": 8,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				8
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "5f41f967-3fe7-43cd-b8a1-87e7718bd459",
+			"name": "Get Transaction Details by Transaction ID (Admin)",
+			"url": "http://localhost:3000/api/admin/transaction/2/detail",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				10
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "f9c92ad8-c607-4d75-b156-ecf57734c36c",
+			"name": "Get Transaction Details by Transaction ID (Admin)",
+			"url": "http://localhost:3000/api/admin/transaction/3/detail",
+			"time": 12,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				12
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "585aeb64-69ac-4bf7-9cbc-7ceeb34186e6",
+			"name": "Get Transaction Details by Transaction ID (Admin)",
+			"url": "http://localhost:3000/api/admin/transaction/4/detail",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				10
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "71132f50-1e39-4558-8108-23e431c262ba",
+			"name": "Get Transaction Detail by ID (Admin)",
+			"url": "http://localhost:3000/api/admin/transaction/detail/7",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				10
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "29dc5eed-126c-4e3d-8d96-0fcf6b97ca1f",
+			"name": "Get Transaction Detail by ID (Admin)",
+			"url": "http://localhost:3000/api/admin/transaction/detail/8",
+			"time": 8,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				8
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "ff1e1164-6202-4140-84c0-e514a4ec737b",
+			"name": "Get Transaction Detail by ID (Admin)",
+			"url": "http://localhost:3000/api/admin/transaction/detail/9",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				7
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "d6e841d6-5742-49d1-b5f5-1cc46335ad6b",
+			"name": "Get Transaction Detail by ID (Admin)",
+			"url": "http://localhost:3000/api/admin/transaction/detail/11",
+			"time": 8,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				8
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "0af438e9-8509-41b1-a6fe-8b2a1c73253f",
+			"name": "Get Client Transaction Detail (Client)",
+			"url": "http://localhost:3000/api/client/transaction/detail",
+			"time": 11,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				11
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "dde7dcc2-ebff-47c8-ba93-68b3a57e0918",
+			"name": "Get Client Transaction Detail (Client)",
+			"url": "http://localhost:3000/api/client/transaction/detail",
+			"time": 8,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				8
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 813,
+	"collection": {
+		"requests": [
+			{
+				"id": "81d55583-de22-4e84-a0b2-c86d4177409f",
+				"method": "GET"
+			},
+			{
+				"id": "20ebe52d-58d7-40f7-a5a8-657fe890e328",
+				"method": "GET"
+			},
+			{
+				"id": "7d003f66-7097-404f-9566-d3fed6b48fbc",
+				"method": "GET"
+			},
+			{
+				"id": "7f239427-7c43-4d1c-9b4b-f7b24e56164e",
+				"method": "GET"
+			},
+			{
+				"id": "c6f8a269-2dd0-4967-8568-7200b3e1544f",
+				"method": "GET"
+			},
+			{
+				"id": "067a1bcd-3669-40e0-9c4c-69c689773f15",
+				"method": "GET"
+			},
+			{
+				"id": "05926ce9-b954-48ee-8aab-45f51f1f2a7b",
+				"method": "GET"
+			},
+			{
+				"id": "5abbdfbb-10da-4794-b81d-dee79d1110a9",
+				"method": "GET"
+			},
+			{
+				"id": "0a2de9e2-eb88-40ba-bec5-f0c8e8ee71ab",
+				"method": "GET"
+			},
+			{
+				"id": "f666ee58-fd8a-4752-8856-eb6abfe18869",
+				"method": "PUT"
+			},
+			{
+				"id": "a19d3305-8c8e-4496-96fc-cc5bf0e32184",
+				"method": "PUT"
+			},
+			{
+				"id": "6e79107a-f6c0-4420-ae45-166190d329c3",
+				"method": "PUT"
+			},
+			{
+				"id": "dc7e85c1-cd94-4f80-aef5-60a6d3e40252",
+				"method": "PUT"
+			},
+			{
+				"id": "f3cea0a5-447c-4993-bab4-065820db5913",
+				"method": "PUT"
+			},
+			{
+				"id": "7a0649ea-4cf9-415e-8d80-6ae1885beedd",
+				"method": "PUT"
+			},
+			{
+				"id": "4a4bf3e5-2d00-47b3-bbbc-2cceded0f52f",
+				"method": "GET"
+			},
+			{
+				"id": "17e9ee79-1c30-4725-89c8-5c28854769d7",
+				"method": "POST"
+			},
+			{
+				"id": "fab30000-87ba-4b43-8d64-60ff70126b4e",
+				"method": "POST"
+			},
+			{
+				"id": "51281380-bdcc-4e79-b080-e23e71d9b6af",
+				"method": "POST"
+			},
+			{
+				"id": "2d5f9c5e-cf5c-4836-b348-083cac1d0b22",
+				"method": "POST"
+			},
+			{
+				"id": "290539cc-2a80-4f8e-8b9d-c159b306a2c1",
+				"method": "GET"
+			},
+			{
+				"id": "e82ebe93-a90d-49bb-8690-3213c1388a7f",
+				"method": "GET"
+			},
+			{
+				"id": "2819ac33-bc3b-47cf-bdcc-4e450c36a3ce",
+				"method": "GET"
+			},
+			{
+				"id": "3ef9f142-a9fb-4c02-92b2-2ebab0064f2c",
+				"method": "GET"
+			},
+			{
+				"id": "d0e7a74b-80b5-44d0-a69d-1acac6239ef2",
+				"method": "GET"
+			},
+			{
+				"id": "ad936e93-a5f8-4935-acf1-aea604084936",
+				"method": "GET"
+			},
+			{
+				"id": "286463a4-db8f-4478-b4e5-d195f9c7c401",
+				"method": "PUT"
+			},
+			{
+				"id": "8af7c3dc-e27d-4db5-8f1a-fab83c372e7f",
+				"method": "PUT"
+			},
+			{
+				"id": "497acfa9-803c-43b8-8a50-96ba65ce381a",
+				"method": "PUT"
+			},
+			{
+				"id": "4bcb6814-17af-4604-91bd-5caedbd5de00",
+				"method": "PUT"
+			},
+			{
+				"id": "de61ed58-f785-4ddb-9f91-c85a857167d6",
+				"method": "POST"
+			},
+			{
+				"id": "cc687031-a89c-4e03-94f7-9de796357d1d",
+				"method": "POST"
+			},
+			{
+				"id": "8a79383d-40eb-49d0-be1e-10cec8ace202",
+				"method": "POST"
+			},
+			{
+				"id": "a022f841-4260-4260-89f0-4453c6905cad",
+				"method": "POST"
+			},
+			{
+				"id": "1bef6763-cd22-476c-937a-329afded956f",
+				"method": "POST"
+			},
+			{
+				"id": "b89d923b-7efa-48c5-8770-dc53c4d256c3",
+				"method": "POST"
+			},
+			{
+				"id": "b2a71529-4153-4945-924d-2a8efb31d01e",
+				"method": "GET"
+			},
+			{
+				"id": "37972136-5206-4a27-bf64-ca81a511df33",
+				"method": "GET"
+			},
+			{
+				"id": "1bd7728c-ada0-484c-b2ea-eb3405318f17",
+				"method": "GET"
+			},
+			{
+				"id": "d041bbe3-c2ac-44a6-b688-f2e54a157f05",
+				"method": "GET"
+			},
+			{
+				"id": "673defaa-da0e-4553-b2b3-1563087be36b",
+				"method": "GET"
+			},
+			{
+				"id": "b2997d52-de03-4989-ae60-9e3a7a9f23f5",
+				"method": "GET"
+			},
+			{
+				"id": "621d65f1-4ff3-4436-9fdd-9f9adc5709bd",
+				"method": "GET"
+			},
+			{
+				"id": "90c732e0-c98e-4b4c-a79e-c2fc2d62b866",
+				"method": "GET"
+			},
+			{
+				"id": "07be6bd9-d647-4a5a-a613-f0cf06a06473",
+				"method": "GET"
+			},
+			{
+				"id": "02a538c9-72e8-485a-a773-46308612a554",
+				"method": "GET"
+			},
+			{
+				"id": "80f91baf-cd67-4cb9-b341-9f4b866a2288",
+				"method": "PUT"
+			},
+			{
+				"id": "b07039da-1fec-4c13-b59a-b6f3d6563831",
+				"method": "PUT"
+			},
+			{
+				"id": "c92d14bb-168e-40d0-830b-037bcab5b96a",
+				"method": "PUT"
+			},
+			{
+				"id": "e91fbc75-756b-432f-8aac-063217591e70",
+				"method": "PUT"
+			},
+			{
+				"id": "e9fee57f-46f0-4d0a-a192-db31f60bfb9b",
+				"method": "PUT"
+			},
+			{
+				"id": "cffa3d12-f217-4783-b464-1ca11ee480db",
+				"method": "PUT"
+			},
+			{
+				"id": "97ac83d8-5855-423c-a7ca-a3e9aa5930e7",
+				"method": "GET"
+			},
+			{
+				"id": "a18446ae-dbae-4923-a832-4611b2262ce0",
+				"method": "GET"
+			},
+			{
+				"id": "5f41f967-3fe7-43cd-b8a1-87e7718bd459",
+				"method": "GET"
+			},
+			{
+				"id": "f9c92ad8-c607-4d75-b156-ecf57734c36c",
+				"method": "GET"
+			},
+			{
+				"id": "585aeb64-69ac-4bf7-9cbc-7ceeb34186e6",
+				"method": "GET"
+			},
+			{
+				"id": "71132f50-1e39-4558-8108-23e431c262ba",
+				"method": "GET"
+			},
+			{
+				"id": "29dc5eed-126c-4e3d-8d96-0fcf6b97ca1f",
+				"method": "GET"
+			},
+			{
+				"id": "ff1e1164-6202-4140-84c0-e514a4ec737b",
+				"method": "GET"
+			},
+			{
+				"id": "d6e841d6-5742-49d1-b5f5-1cc46335ad6b",
+				"method": "GET"
+			},
+			{
+				"id": "0af438e9-8509-41b1-a6fe-8b2a1c73253f",
+				"method": "GET"
+			},
+			{
+				"id": "dde7dcc2-ebff-47c8-ba93-68b3a57e0918",
+				"method": "GET"
+			}
+		]
+	}
+}
