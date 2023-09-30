@@ -96,8 +96,96 @@ Untuk menjalankan proyek ini, ikuti langkah-langkah berikut:
 
 3. Instal dependensi proyek:
 
+   ### Dependencies:
+   a. bcrypt
+   Deskripsi: Untuk mengenkripsi dan mendekripsi kata sandi.
+
+   Cara instalasi:
+
    ```bash
-   npm install
+   npm install bcrypt
+
+   b. body-parser
+   Deskripsi: Middleware untuk mengurai data permintaan HTTP.
+
+   Cara instalasi:
+
+   ```bash
+   npm install body-parser
+
+   c. cors
+   Deskripsi: Middleware untuk mengaktifkan Cross-Origin Resource Sharing (CORS).
+
+   Cara instalasi:
+
+   ```bash
+   npm install cors
+
+   d. express
+   Deskripsi: Kerangka kerja untuk mengembangkan aplikasi web.
+
+   Cara instalasi:
+
+   ```bash
+   npm install express
+
+   e. express-validator
+   Deskripsi: Alat validasi untuk Express.js.
+
+   Cara instalasi:
+
+   ```bash
+   npm install express-validator
+
+   f. jsonwebtoken
+   Deskripsi: Untuk menghasilkan dan memverifikasi token JSON Web (JWT).
+
+   Cara instalasi:
+
+   ```bash
+   npm install jsonwebtoken
+
+   g. mysql2
+   Deskripsi: Driver untuk menghubungkan aplikasi dengan database MySQL.
+
+   Cara instalasi:
+
+   ```bash
+   npm install mysql2
+
+   h. pg
+   Deskripsi: Driver untuk menghubungkan aplikasi dengan database PostgreSQL.
+
+   Cara instalasi:
+
+   ```bash
+   npm install pg
+
+   i. sequelize
+   Deskripsi: ORM (Object-Relational Mapping) untuk mengakses database SQL dengan lebih mudah.
+
+   Cara instalasi:
+
+   ```bash
+   npm install sequelize
+
+   j. sequelize-cli
+   Deskripsi: CLI (Command Line Interface) untuk Sequelize, digunakan untuk mengelola migrasi dan seeding database.
+
+   Cara instalasi:
+
+   ```bash
+   npm install sequelize-cli
+
+   ### Dev Dependencies:
+   nodemon
+   Deskripsi: Untuk memantau perubahan berkas dan secara otomatis memulai ulang server saat berkas berubah selama pengembangan.
+
+   Cara instalasi:
+
+   ```bash
+   npm install nodemon --save-dev
+
 
 4. Konfigurasi Database: Pastikan Anda telah mengatur database MySQL dan mengonfigurasi koneksi database Anda di berkas konfigurasi.
 Jalankan migrasi database untuk membuat tabel yang diperlukan:
