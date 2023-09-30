@@ -103,9 +103,7 @@ Untuk menjalankan proyek ini, ikuti langkah-langkah berikut:
 
    Cara instalasi:
 
-   ```bash
    npm install bcrypt
-   
 
    b. body-parser
    
@@ -113,7 +111,6 @@ Untuk menjalankan proyek ini, ikuti langkah-langkah berikut:
 
    Cara instalasi:
 
-   ```bash
    npm install body-parser
 
    c. cors
@@ -122,7 +119,6 @@ Untuk menjalankan proyek ini, ikuti langkah-langkah berikut:
 
    Cara instalasi:
 
-   ```bash
    npm install cors
 
    d. express
@@ -131,7 +127,6 @@ Untuk menjalankan proyek ini, ikuti langkah-langkah berikut:
 
    Cara instalasi:
 
-   ```bash
    npm install express
 
    e. express-validator
@@ -140,7 +135,6 @@ Untuk menjalankan proyek ini, ikuti langkah-langkah berikut:
 
    Cara instalasi:
 
-   ```bash
    npm install express-validator
 
    f. jsonwebtoken
@@ -149,7 +143,6 @@ Untuk menjalankan proyek ini, ikuti langkah-langkah berikut:
 
    Cara instalasi:
 
-   ```bash
    npm install jsonwebtoken
 
    g. mysql2
@@ -158,7 +151,6 @@ Untuk menjalankan proyek ini, ikuti langkah-langkah berikut:
 
    Cara instalasi:
 
-   ```bash
    npm install mysql2
 
    h. pg
@@ -167,7 +159,6 @@ Untuk menjalankan proyek ini, ikuti langkah-langkah berikut:
 
    Cara instalasi:
 
-   ```bash
    npm install pg
 
    i. sequelize
@@ -176,7 +167,6 @@ Untuk menjalankan proyek ini, ikuti langkah-langkah berikut:
 
    Cara instalasi:
 
-   ```bash
    npm install sequelize
 
    j. sequelize-cli
@@ -185,7 +175,6 @@ Untuk menjalankan proyek ini, ikuti langkah-langkah berikut:
 
    Cara instalasi:
 
-   ```bash
    npm install sequelize-cli
 
    ### Dev Dependencies:
@@ -228,3 +217,6 @@ Terima kasih telah menggunakan Kasir Super Market - Simple Rest API! Kami harap 
 ## Kasir Super Market
 
 Pastikan Anda menggantikan `https://github.com/MidoriNoKen/kasir-supermarket-nodejs` dengan URL yang benar untuk repositori GitHub Anda. Anda juga dapat menyesuaikan tampilan, seperti menambahkan logo atau mengganti warna teks sesuai preferensi Anda.
+
+
+
