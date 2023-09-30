@@ -96,96 +96,77 @@ Untuk menjalankan proyek ini, ikuti langkah-langkah berikut:
 
 3. Instal dependensi proyek:
 
-   ### Dependencies:
-   a. bcrypt
-   
-   Deskripsi: Untuk mengenkripsi dan mendekripsi kata sandi.
+    ### Dependencies:
 
-   Cara instalasi:
+    a. **bcrypt**
+    - **Deskripsi**: Untuk mengenkripsi dan mendekripsi kata sandi.
+    - **Cara instalasi**:
+        ```bash
+        npm install bcrypt
+        ```
 
-   ```bash
-   npm install bcrypt```
+    b. **body-parser**
+    - **Deskripsi**: Middleware untuk mengurai data permintaan HTTP.
+    - **Cara instalasi**:
+        ```bash
+        npm install body-parser
+        ```
 
-   b. body-parser
-   
-   Deskripsi: Middleware untuk mengurai data permintaan HTTP.
+    c. **cors**
+    - **Deskripsi**: Middleware untuk mengaktifkan Cross-Origin Resource Sharing (CORS).
+    - **Cara instalasi**:
+        ```bash
+        npm install cors
+        ```
 
-   Cara instalasi:
+    d. **express**
+    - **Deskripsi**: Kerangka kerja untuk mengembangkan aplikasi web.
+    - **Cara instalasi**:
+        ```bash
+        npm install express
+        ```
 
-   ```bash
-   npm install body-parser```
+    e. **express-validator**
+    - **Deskripsi**: Alat validasi untuk Express.js.
+    - **Cara instalasi**:
+        ```bash
+        npm install express-validator
+        ```
 
-   c. cors
-   
-   Deskripsi: Middleware untuk mengaktifkan Cross-Origin Resource Sharing (CORS).
+    f. **jsonwebtoken**
+    - **Deskripsi**: Untuk menghasilkan dan memverifikasi token JSON Web (JWT).
+    - **Cara instalasi**:
+        ```bash
+        npm install jsonwebtoken
+        ```
 
-   Cara instalasi:
+    g. **mysql2**
+    - **Deskripsi**: Driver untuk menghubungkan aplikasi dengan database MySQL.
+    - **Cara instalasi**:
+        ```bash
+        npm install mysql2
+        ```
 
-   ```bash
-   npm install cors```
+    h. **pg**
+    - **Deskripsi**: Driver untuk menghubungkan aplikasi dengan database PostgreSQL.
+    - **Cara instalasi**:
+        ```bash
+        npm install pg
+        ```
 
-   d. express
-   
-   Deskripsi: Kerangka kerja untuk mengembangkan aplikasi web.
+    i. **sequelize**
+    - **Deskripsi**: ORM (Object-Relational Mapping) untuk mengakses database SQL dengan lebih mudah.
+    - **Cara instalasi**:
+        ```bash
+        npm install sequelize
+        ```
 
-   Cara instalasi:
-
-   ```bash
-   npm install express```
-
-   e. express-validator
-   
-   Deskripsi: Alat validasi untuk Express.js.
-
-   Cara instalasi:
-
-   ```bash
-   npm install express-validator```
-
-   f. jsonwebtoken
-   
-   Deskripsi: Untuk menghasilkan dan memverifikasi token JSON Web (JWT).
-
-   Cara instalasi:
-
-   ```bash
-   npm install jsonwebtoken```
-
-   g. mysql2
-   
-   Deskripsi: Driver untuk menghubungkan aplikasi dengan database MySQL.
-
-   Cara instalasi:
-
-   ```bash
-   npm install mysql2```
-
-   h. pg
-   
-   Deskripsi: Driver untuk menghubungkan aplikasi dengan database PostgreSQL.
-
-   Cara instalasi:
-
-   ```bash
-   npm install pg```
-
-   i. sequelize
-   
-   Deskripsi: ORM (Object-Relational Mapping) untuk mengakses database SQL dengan lebih mudah.
-
-   Cara instalasi:
-
-   ```bash
-   npm install sequelize```
-
-   j. sequelize-cli
-   
-   Deskripsi: CLI (Command Line Interface) untuk Sequelize, digunakan untuk mengelola migrasi dan seeding database.
-
-   Cara instalasi:
-
-   ```bash
-   npm install sequelize-cli
+    j. **sequelize-cli**
+        - **Deskripsi**: CLI (Command Line Interface) untuk Sequelize, digunakan untuk mengelola migrasi dan seeding database.
+        - **Cara instalasi**:
+        ```bash
+        npm install sequelize-cli
+        ```
 
    ### Dev Dependencies:
    nodemon
@@ -227,6 +208,3 @@ Terima kasih telah menggunakan Kasir Super Market - Simple Rest API! Kami harap 
 ## Kasir Super Market
 
 Pastikan Anda menggantikan `https://github.com/MidoriNoKen/kasir-supermarket-nodejs` dengan URL yang benar untuk repositori GitHub Anda. Anda juga dapat menyesuaikan tampilan, seperti menambahkan logo atau mengganti warna teks sesuai preferensi Anda.
-
-
-
