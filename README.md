@@ -195,6 +195,8 @@ Jalankan migrasi database untuk membuat tabel yang diperlukan:
 
 Dokumentasi API tersedia dalam format Postman. Anda dapat mengimpor berkas Postman JSON yang menyertai proyek ini untuk mendapatkan dokumentasi lengkap tentang endpoin API, permintaan yang diperlukan, dan tanggapan yang diharapkan.
 
+https://documenter.getpostman.com/view/24868597/2s9YJaY47Z
+
 ## Kontribusi
 
 Kami sangat menyambut kontribusi dari komunitas. Jika Anda ingin berkontribusi pada proyek ini, silakan buka "Issues" untuk menemukan pekerjaan yang perlu dilakukan atau buat "Pull Request" dengan perubahan yang Anda ajukan.
