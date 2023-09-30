@@ -1,6 +1,6 @@
 # Kasir Super Market - Simple Rest API
 
-![Kasir Super Market Logo](kasir-super-market-logo.png)
+[Kasir Super Market - Simple Rest API](#kasir-supermarket)
 
 - [Deskripsi Proyek](#deskripsi-proyek)
 - [Desain Database](#desain-database)
